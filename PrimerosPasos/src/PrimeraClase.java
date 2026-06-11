@@ -2,6 +2,8 @@
  * 
  */
 
+import java.util.Scanner;
+
 /**
  * 
  */
@@ -14,6 +16,7 @@ public class PrimeraClase {
 		// TODO Auto-generated method stub
 		
 		System.out.print("hola mundo");
+
 
 	}
 
