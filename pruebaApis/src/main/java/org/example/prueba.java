@@ -3,17 +3,17 @@ package org.example;
 import com.google.gson.Gson;
 
 import java.io.IOException;
-import java.net.HttpURLConnection;
 import java.net.URI;
 import java.net.URL;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
 
 
 public class prueba {
 
 
-        public static void main(String[] args) throws IOException {
+        public static void main(String[] args) throws IOException, InterruptedException {
 
             //configuracion url
             String url =  "https://v6.exchangerate-api.com/v6/035a59fa61757caf8da3925c/latest/USD";
@@ -28,8 +28,18 @@ public class prueba {
                     .GET()
                     .build();
 
-            //enviar la petición y recibir la respuestay
+            //enviar la petición y recibir la respuesta
+            HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
 
+            String jsonResponse = response.body();
+            System.out.println(jsonResponse);
+
+
+
+
+
+
+            
             // Crea un objeto Java (La clase Persona es solo un ejemplo genérico)
 //            Persona persona = new Persona("Juan", 30);
 //
