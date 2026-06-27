@@ -42,23 +42,27 @@ public class prueba {
             String jsonResponse = response.body();
 
 
-
+            // Aquí se pasa a datos Gson a variables
             Gson gson = new Gson();
             gson_variables datos =   gson.fromJson(jsonResponse , gson_variables.class);
 
-
-            String monedaBase = datos.base_code;
-            String monedaDestino = "USD";                                   // ESO HAY QUE ESTAR CAMBIANDO MANUALMENTE Y ESO NO ES EFICIENTE
-            double cotizacion = datos.conversion_rates.get("USD");
-            Collection<Double> cotizacion1 = datos.conversion_rates.values();
+            String text = """
+                     Aqui se muetran los resultados del mercado"""
 
 
+                //se lo agrega a unas variables
+//            String monedaBase = datos.base_code;
+//            String monedaDestino = "USD";                                   // ESO HAY QUE ESTAR CAMBIANDO MANUALMENTE Y ESO NO ES EFICIENTE
+//            double cotizacion = datos.conversion_rates.get("USD");
+//            Collection<Double> cotizacion1 = datos.conversion_rates.values();
 
 
-            System.out.println(monedaBase);
-            System.out.println(monedaDestino);
-            System.out.println(cotizacion);
-            System.out.println(cotizacion1);
+
+
+//            System.out.println(monedaBase);
+//            System.out.println(monedaDestino);
+//            System.out.println(cotizacion);
+//            System.out.println(cotizacion1);
 
 
 
